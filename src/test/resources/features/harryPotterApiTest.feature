@@ -84,7 +84,7 @@ And Verify that response contains the same character information from step 3. Co
   Then Verify status code 200, content type "application/json; charset=utf-8"
   And Verify response body is empty
 
-
+@Test9
 
     Scenario:    Verify house members
     Given Send a get request to "houses"
