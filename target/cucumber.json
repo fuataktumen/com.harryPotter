@@ -1,0 +1,1306 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2020-03-08T22:37:15.126Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1362400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Verify sorting hat",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-sorting-hat",
+        "after": [
+          {
+            "result": {
+              "duration": 181300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8110225600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Send a get request to \"sortingHat\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sortingHat\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2511700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 125504500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "that response body contains one of the following houses:",
+            "match": {
+              "location": "harryPotterApiTest.that_response_body_contains_one_of_the_following_houses(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Gryffindor",
+                  "Ravenclaw",
+                  "Slytherin",
+                  "Hufflepuff"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test1"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:23.455Z",
+        "before": [
+          {
+            "result": {
+              "duration": 86600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Verify bad key",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-bad-key",
+        "after": [
+          {
+            "result": {
+              "duration": 62300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 350520400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 636600,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 433305600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Query param key with value invalid",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_invalid()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 210300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Verify status code 401, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 180400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Verify response status line include message \"Unauthorized\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Unauthorized\"",
+                  "offset": 44
+                }
+              ],
+              "location": "harryPotterApiTest.verify_response_status_line_include_message(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 826303000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Verify that response body says \"error\" \"API Key Not Found\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"error\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"API Key Not Found\"",
+                  "offset": 39
+                }
+              ],
+              "location": "harryPotterApiTest.verify_that_response_body_says(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:25.061Z",
+        "before": [
+          {
+            "result": {
+              "duration": 83400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Verify no key",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-no-key",
+        "after": [
+          {
+            "result": {
+              "duration": 46400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 361069200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 872900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 258400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Verify status code 409, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "409",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102600,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Verify response status line include message \"Conflict\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Conflict\"",
+                  "offset": 44
+                }
+              ],
+              "location": "harryPotterApiTest.verify_response_status_line_include_message(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17262300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "Verify that response body says \"error\" \"Must pass API key for request\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"error\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Must pass API key for request\"",
+                  "offset": 39
+                }
+              ],
+              "location": "harryPotterApiTest.verify_that_response_body_says(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test3"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:25.448Z",
+        "before": [
+          {
+            "result": {
+              "duration": 86100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "Verify number of characters",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-number-of-characters",
+        "after": [
+          {
+            "result": {
+              "duration": 68100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 343088300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1164800,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 583510100,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 280000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 201406000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "Verify response contains 195 characters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "195",
+                  "offset": 25
+                }
+              ],
+              "location": "harryPotterApiTest.verify_response_contains_characters(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test4"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:26.590Z",
+        "before": [
+          {
+            "result": {
+              "duration": 88800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 46,
+        "name": "Verify number of character id and house",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-number-of-character-id-and-house",
+        "after": [
+          {
+            "result": {
+              "duration": 58900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 339615500,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 601900,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 535751200,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 191300,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 467928600,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "Verify all characters in the response have id field which is not empty",
+            "match": {
+              "location": "harryPotterApiTest.verify_all_characters_in_the_response_have_id_field_which_is_not_empty()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11907800,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "Verify that value type of the field dumbledoresArmy is a boolean in all characters in the response",
+            "match": {
+              "location": "harryPotterApiTest.verify_that_value_type_of_the_field_dumbledoresArmy_is_a_boolean_in_all_characters_in_the_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9451400,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "Verify value of the house in all characters in the response is one of the following:",
+            "match": {
+              "location": "harryPotterApiTest.verify_value_of_the_house_in_all_characters_in_the_response_is_one_of_the_following(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Gryffindor",
+                  "Ravenclaw",
+                  "Slytherin",
+                  "Hufflepuff"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test5"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:27.957Z",
+        "before": [
+          {
+            "result": {
+              "duration": 71100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 57,
+        "name": "Verify all character information",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-all-character-information",
+        "after": [
+          {
+            "result": {
+              "duration": 68600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 315148100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 846600,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 454904700,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 232400,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 239392100,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "Select name of any random character",
+            "match": {
+              "location": "harryPotterApiTest.select_name_of_any_random_character()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 317235600,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 472200,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 332091300,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 242908700,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "Query param name with value from step 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 38
+                }
+              ],
+              "location": "harryPotterApiTest.query_param_name_with_value_from_step(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 235153800,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "Verify that response contains the same character information from step 3. Compare all fields.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 71
+                }
+              ],
+              "location": "harryPotterApiTest.verify_that_response_contains_the_same_character_information_from_step_Compare_all_fields(int)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test6"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:30.090Z",
+        "before": [
+          {
+            "result": {
+              "duration": 70800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 73,
+        "name": "Verify name search",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-name-search",
+        "after": [
+          {
+            "result": {
+              "duration": 46900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 225292700,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 355500,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 578972700,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 314556100,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "Query param name with value Harry Potter",
+            "match": {
+              "location": "harryPotterApiTest.query_param_name_with_value_Harry_Potter()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 260200,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28029900,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "Verify name Harry Potter",
+            "match": {
+              "location": "harryPotterApiTest.verify_name_Harry_Potter()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 219412100,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "Send a get request to \"characters\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"characters\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 459400,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 440903400,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 279723900,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "Query param name with value Marry Potter",
+            "match": {
+              "location": "harryPotterApiTest.query_param_name_with_value_Marry_Potter()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 102200,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2368700,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "Verify response body is empty",
+            "match": {
+              "location": "harryPotterApiTest.verify_response_body_is_empty()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          },
+          {
+            "name": "@Test7"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-03-08T22:37:32.193Z",
+        "before": [
+          {
+            "result": {
+              "duration": 72000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setuP()"
+            }
+          }
+        ],
+        "line": 89,
+        "name": "Verify house members",
+        "description": "",
+        "id": "harry-potter-api-testing;verify-house-members",
+        "after": [
+          {
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABAoAAAJACAYAAAAEt4QcAAAAAXNSR0IArs4c6QAADVhJREFUeJzt2DEBwDAMwLCs/Dlnnym0h4TAt7/d3QEAAACYmXM7AAAAAHiHUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgRgEAAAAQowAAAACIUQAAAADEKAAAAABiFAAAAAAxCgAAAIAYBQAAAECMAgAAACBGAQAAABCjAAAAAIhRAAAAAMQoAAAAAGIUAAAAADEKAAAAgBgFAAAAQIwCAAAAIEYBAAAAEKMAAAAAiFEAAAAAxCgAAAAAYhQAAAAAMQoAAACAGAUAAABAjAIAAAAgP7xqCHxX5to9AAAAAElFTkSuQmCC",
+                "mime_type": "image/png"
+              }
+            ],
+            "result": {
+              "duration": 8869618900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 360450900,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "Send a get request to \"houses\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"houses\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.send_a_get_request_to(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 428000,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 313419400,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 248400,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "Verify status code 200, content type \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 37
+                }
+              ],
+              "location": "harryPotterApiTest.verify_status_code_content_type(int,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 0, was 1. Redundant path parameters are: key\u003d$2a$10$eGAQ9xfhpFY3JdWfdAsYbOdNg4SIkvQbhB7cStp2./ghuZbs/988O.\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)\r\n\tat io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1248)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:160)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1135)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:151)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor72.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:821)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:184)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:171)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat com.HarryPotter.stepdefinitions.harryPotterApiTest.capture_the_id_of_the_house(harryPotterApiTest.java:246)\r\n\tat ✽.Capture the id of the \"Gryffindor\" house(file:src/test/resources/features/harryPotterApiTest.feature:94)\r\n",
+              "duration": 95418900,
+              "status": "failed"
+            },
+            "line": 94,
+            "name": "Capture the id of the \"Gryffindor\" house",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Gryffindor\"",
+                  "offset": 22
+                }
+              ],
+              "location": "harryPotterApiTest.capture_the_id_of_the_house(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61900,
+              "status": "skipped"
+            },
+            "line": 95,
+            "name": "Capture the ids of the all members of the \"Gryffindor\" house",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Gryffindor\"",
+                  "offset": 42
+                }
+              ],
+              "location": "harryPotterApiTest.capture_the_ids_of_the_all_members_of_the_house(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33900,
+              "status": "skipped"
+            },
+            "line": 96,
+            "name": "Send a get request to /houses/:id",
+            "match": {
+              "location": "harryPotterApiTest.send_a_get_request_to_houses_id()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23400,
+              "status": "skipped"
+            },
+            "line": 97,
+            "name": "Header Accept with value application json",
+            "match": {
+              "location": "harryPotterApiTest.header_Accept_with_value_application_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19500,
+              "status": "skipped"
+            },
+            "line": 98,
+            "name": "Query param key with value apiKey",
+            "match": {
+              "location": "harryPotterApiTest.query_param_key_with_value_apiKey()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19700,
+              "status": "skipped"
+            },
+            "line": 99,
+            "name": "Path param id with value from step 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 35
+                }
+              ],
+              "location": "harryPotterApiTest.path_param_id_with_value_from_step(Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19500,
+              "status": "skipped"
+            },
+            "line": 100,
+            "name": "Verify that response contains the same member ids as the step 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 62
+                }
+              ],
+              "location": "harryPotterApiTest.verify_that_response_contains_the_same_member_ids_as_the_step(Integer)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TestAll"
+          }
+        ]
+      }
+    ],
+    "name": "Harry Potter Api Testing",
+    "description": "",
+    "id": "harry-potter-api-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/harryPotterApiTest.feature",
+    "tags": [
+      {
+        "name": "@TestAll",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
